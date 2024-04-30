@@ -1,92 +1,142 @@
-/* General Reset and Styling */
-body, h1, h2, h3, p, form, ul, input, textarea, button {
+/* Reset and General Styling */
+* {
     margin: 0;
     padding: 0;
     border: 0;
     outline: none;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #121212; /* Dark background for overall body */
-    color: #E0E0E0; /* Light grey text for readability */
-    line-height: 1.5;
+    background-color: #121212; /* Dark background for a sleek, modern look */
+    color: #ccc; /* Light gray text for high readability on dark backgrounds */
+    line-height: 1.6;
     padding: 20px;
 }
 
-/* Header and Footer Styling */
-header, footer {
-    background-color: #1c1c1c; /* Slightly lighter dark shade for header and footer */
-    color: #FFFFFF;
+header {
+    background: linear-gradient(to right, #333333, #555555); /* Metallic gray gradient */
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
-    padding: 15px 0;
-    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Deeper shadow for a pronounced effect */
+    border-radius: 10px;
 }
 
-/* Navigation Styling */
 nav ul {
     list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li a {
-    color: #BDBDBD; /* Subdued text color for links */
+    color: #bbb;
     text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
 }
 
-/* Main Section Styling */
 main {
-    background: #333; /* Dark grey background for main content area */
     padding: 20px;
+    background: #1e1e1e; /* Slightly lighter black for content sections */
     border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
-/* Button and Form Input Styling */
-button, input[type="text"], input[type="email"], input[type="file"], textarea {
-    background: #424242; /* Dark field backgrounds */
-    color: #E0E0E0;
-    padding: 10px;
-    border-radius: 4px;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ddd; /* Lighter text for labels to enhance visibility */
+}
+
+input[type="file"], input[type="text"], input[type="email"], textarea {
     width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #555; /* Dark borders for inputs */
+    background-color: #222; /* Dark input backgrounds */
+    color: #eee; /* Light text inside inputs */
+}
+
+.file-upload-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-upload-input {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #333333, #555555);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.file-upload-button:hover {
+    background: linear-gradient(to right, #2c2c2c, #4d4d4d);
 }
 
 button {
-    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #333333, #555555);
+    color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #575757; /* Lighten button background on hover */
+    background: linear-gradient(to right, #2c2c2c, #4d4d4d);
 }
 
-/* Gallery Styling for Abstraction */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
 }
 
-.photo {
-    background-color: #252525; /* Dark backgrounds for photos */
-    border: 1px solid #333; /* Border to subtly differentiate photo blocks */
+/* Professional touches */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300; /* Lighter font-weights for headers to maintain a sleek look */
+    color: #ccc; /* Ensuring headers are also readable */
+}
+
+fieldset {
+    border: 1px solid #555;
+    padding: 10px;
+    margin-top: 10px;
     border-radius: 4px;
-    overflow: hidden;
-    padding: 5px;
 }
 
-.photo img {
-    width: 100%;
-    display: block; /* Ensures no extra space at the bottom of the image */
-    transition: transform 0.3s ease-in-out;
-}
-
-.photo:hover img {
-    transform: scale(1.05); /* Slight zoom on hover for interactive effect */
+legend {
+    padding: 0 5px;
+    font-size: 16px;
+    color: #ddd;
 }
