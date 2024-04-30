@@ -1,0 +1,92 @@
+/* General Reset and Styling */
+body, h1, h2, h3, p, form, ul, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background for overall body */
+    color: #E0E0E0; /* Light grey text for readability */
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Header and Footer Styling */
+header, footer {
+    background-color: #1c1c1c; /* Slightly lighter dark shade for header and footer */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #BDBDBD; /* Subdued text color for links */
+    text-decoration: none;
+}
+
+/* Main Section Styling */
+main {
+    background: #333; /* Dark grey background for main content area */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Button and Form Input Styling */
+button, input[type="text"], input[type="email"], input[type="file"], textarea {
+    background: #424242; /* Dark field backgrounds */
+    color: #E0E0E0;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #575757; /* Lighten button background on hover */
+}
+
+/* Gallery Styling for Abstraction */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.photo {
+    background-color: #252525; /* Dark backgrounds for photos */
+    border: 1px solid #333; /* Border to subtly differentiate photo blocks */
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.photo img {
+    width: 100%;
+    display: block; /* Ensures no extra space at the bottom of the image */
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover img {
+    transform: scale(1.05); /* Slight zoom on hover for interactive effect */
+}
