@@ -140,3 +140,108 @@ legend {
     font-size: 16px;
     color: #ddd;
 }
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/* General reset for form elements within form-group */
+.form-group input[type="radio"] {
+  opacity: 0; /* Hide the default radio button */
+  position: absolute;
+}
+
+/* Custom styling for labels for the radio buttons */
+.form-group label:hover {
+    background-color: #bcbaba; /* Light grey background on hover */
+    color: #333; /* Darker text for better contrast */
+  }
+  
+  /* Hover effect for the custom radio button */
+  .form-group input[type="radio"] + label:hover::before {
+    border-color: #4CAF50; /* Green border on hover */
+  }
+
+/* Creating a custom radio button using pseudo-elements */
+.form-group input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Default unselected background color */
+    border: 2px solid #ccc; /* Default unselected border color */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+
+/* Style when radio is checked */
+.form-group input[type="radio"]:checked + label::before {
+    background-color: #4CAF50; /* Green background when selected */
+    border-color: #4CAF50; 
+}
+
+/* Style for hover effect on label */
+.form-group label:hover::before {
+  border-color: #888;
+}
+
+/* Styling for the form's text input and textarea */
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Makes sure padding does not affect width */
+}
+
+/* Styling for submit button */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Additional styling for hover state of the button */
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.thank-you-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #0e0e0e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif; /* Ensures the font is consistent and modern */
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #333; /* Changed to a nice, deep black for a more modern look */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* Larger text for better readability */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for interactive effects */
+}
+
+.home-button:hover {
+    background-color: #2d2b2b; /* A slightly lighter black for hover effect */
+    transform: scale(1.05); /* Slightly enlarge the button on hover for effect */
+}

@@ -1,86 +1,150 @@
-/* General body styling */
-body {
+/* Reset and General Styling */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8; /* Light grey background */
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background for a sleek, modern look */
+    color: #ccc; /* Light gray text for high readability on dark backgrounds */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(to right, #333333, #555555); /* Metallic gray gradient */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Deeper shadow for a pronounced effect */
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-/* Chatbox container */
-.chat-container {
-    width: 350px;
-    height: 500px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
+nav ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+main {
+    padding: 20px;
+    background: #1e1e1e; /* Slightly lighter black for content sections */
     border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ddd; /* Lighter text for labels to enhance visibility */
+}
+
+input[type="file"], input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #555; /* Dark borders for inputs */
+    background-color: #222; /* Dark input backgrounds */
+    color: #eee; /* Light text inside inputs */
+}
+
+.file-upload-wrapper {
+    position: relative;
     overflow: hidden;
+    display: inline-block;
 }
 
-/* Where messages will be displayed */
-.output {
-    flex-grow: 1;
-    padding: 10px;
-    overflow-y: auto;
-    background: #e9eff1; /* Light blue background */
+.file-upload-input {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
 }
 
-/* Individual chat message styling */
-.message {
-    margin: 5px;
-    padding: 10px;
-    border-radius: 20px;
-    color: #fff; /* White text color */
-    width: fit-content;
-    max-width: 70%; /* Maximum width of a message bubble */
-}
-
-/* Different styles for user and bot messages for easy distinction */
-.user {
-    background-color: #007bff; /* Blue for user messages */
-    align-self: flex-end; /* Aligns user messages to right */
-    margin-right: 20px;
-}
-
-.bot {
-    background-color: #333; /* Dark grey for bot messages */
-    align-self: flex-start; /* Aligns bot messages to left */
-    margin-left: 20px;
-}
-
-/* Textarea and button container */
-.chat-form {
-    display: flex;
-    padding: 10px;
-    background: #fff; /* White background */
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-}
-
-/* Styling for the textarea */
-textarea {
-    flex-grow: 1;
-    padding: 10px;
+.file-upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #333333, #555555);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
     border: none;
-    border-radius: 20px;
-    margin-right: 10px;
-    resize: none; /* Disable resizing */
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-/* Styling for the send button */
+.file-upload-button:hover {
+    background: linear-gradient(to right, #2c2c2c, #4d4d4d);
+}
+
+/* Buttons */
 button {
-    background-color: #007bff; /* Blue background */
-    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background: (linear-gradient to right, #333333, #555555);
+    color: #383737;
     border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background: linear-gradient(to right, #828282, #8f8e8e);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+}
+
+/* Radio Button Custom Styling */
+.form-group input[type="radio"] {
+    opacity: 0; /* Hide the default radio button */
+    position: absolute;
+}
+
+.form-group label:hover {
+    background-color: #bcbaba; /* Light grey background on hover */
+    color: #333; /* Darker text for better contrast */
+}
+
+.form-group input[type="radio"] + label:hover::before {
+    border-color: #4CAF50; /* Green border on hover */
+}
+
+.form-group input[type="radio"] + label::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50
 }
